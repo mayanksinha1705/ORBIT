@@ -1,0 +1,13 @@
+{
+  "manifest_version": 3,
+  "name": "ORBIT",
+  "version": "0.1.0",
+  "description": "Voice-first multilingual browser agent powered by Gnani APIs.",
+  "action": { "default_title": "Open ORBIT" },
+  "background": { "service_worker": "background.js", "type": "module" },
+  "permissions": ["activeTab", "tabs", "storage", "scripting", "debugger", "microphone"],
+  "host_permissions": ["<all_urls>", "http://localhost:3000/*"],
+  "content_scripts": [{ "matches": ["<all_urls>"], "js": ["content/dom.js", "content/executor.js", "content/panel.js"], "run_at": "document_idle" }],
+  "content_security_policy": { "extension_pages": "script-src 'self'; object-src 'self'" },
+  "web_accessible_resources": [{ "resources": ["popup/*"], "matches": ["<all_urls>"] }]
+}

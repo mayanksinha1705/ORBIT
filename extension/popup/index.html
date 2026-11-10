@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>ORBIT</title><link rel="stylesheet" href="style.css"></head>
+<body>
+  <main>
+    <header class="topbar"><div class="brand"><div class="logo">O</div><div><strong>ORBIT</strong><small>Private browser intelligence</small></div></div><button id="close" class="icon-button" title="Close">×</button></header>
+    <div class="status-row"><span class="status-dot"></span><span id="state">Ready</span><span class="mode">DOM-first</span></div>
+    <section class="hero"><div class="orb"><span></span></div><h1>What can I do for you?</h1><p>Speak naturally. I’ll understand the page and take the next safe action.</p></section>
+    <div class="voice-actions"><button id="record" class="primary icon-action" title="Speak" aria-label="Speak"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 15.5a3.5 3.5 0 0 0 3.5-3.5V6a3.5 3.5 0 1 0-7 0v6a3.5 3.5 0 0 0 3.5 3.5Z"/><path d="M5 11.5a7 7 0 0 0 14 0M12 18.5V22M8.5 22h7"/></svg></button><button id="stop" class="danger icon-action" title="Stop listening" aria-label="Stop listening" disabled><svg aria-hidden="true" viewBox="0 0 24 24"><path d="m6 6 12 12M18 6 6 18"/></svg></button></div>
+    <pre id="transcript">Your transcription will appear here.</pre>
+    <audio id="audio" controls hidden></audio>
+  </main><script type="module" src="popup.js"></script>
+</body>
+</html>
